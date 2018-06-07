@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from django.urls import path, re_path, include
-from sign import views_if
+from sign import views_if, views_if_sec
 
 
 urlpatterns = [
@@ -15,5 +15,8 @@ urlpatterns = [
     path('get_guest_list/', views_if.get_guest_list, name='get_guest_list'),
     # ex : /api/user_sign/
     path('user_sign/', views_if.user_sign, name='user_sign'),
+
+    # ex : /api/get_event_list_auth/
+    path('sec_get_event_list/', views_if_sec.get_event_list, name='get_event_list'),
 
 ]
